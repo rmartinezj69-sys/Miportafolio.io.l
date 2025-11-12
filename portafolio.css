@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.logo{
+    font-size: 1.4rem;
+    color: #b74b4b;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.logo:hover{ transform: scale(1.05); }
+
+.nav-links a{
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    color: white;
+    transition: 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active{
+    color: #b74b4b;
+}
+
+.menu-btn{
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    display: none;
+}
+
+/* RESPONSIVE MENU */
+@media(max-width: 992px){
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #111;
+        width: 60%;
+        padding: 2rem;
+        display: none;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .nav-links a{
+        margin: 1.5rem 0;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+}
+
+
+.home{
+    padding-top: 10rem;
+    min-height: 100vh;
+}
+
+.home-content h1{
+    font-size: 4.5rem;
+}
+.home-content h3{
+    font-size: 2.8rem;
+    margin: 1rem 0;
+}
+
+
+.home-img{
+    width: 600px;
+    max-width: 75vw;
+    border-radius: 50%;
+    box-shadow: 2 0 10px  #b74b4b;
+}
+
+/* Social Icons */
+.social-icons a{
+    color: #b74b4b;
+    border: 2px solid #b74b4b;
+    padding: 8px;
+    border-radius: 80%;
+    margin-right: 1.2rem;
+    transition: 0.3s;
+}
+.social-icons a:hover{
+    background: #b74b4b;
+    color: black;
+}
+
+/* Button */
+.btn{
+    margin-top: 2rem;
+    border: 2px solid #b74b4b;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #b74b4b;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: #b74b4b;
+    color: black;
+}
+
+
+.typing-text span::before{
+    content: "Diseñador Multimedia";
+    color: #b74b4b;
+    animation: words 12s infinite;
+}
+
+@keyframes words{
+    0%,33%{content: "Diseñador Multimedia";}
+    34%,66%{content: "Fotógrafo";}
+    67%,100%{content: "Editor de Video";}
+}
